@@ -1,5 +1,8 @@
 package q6;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /*
 
 
@@ -25,11 +28,50 @@ string convert(string s, int numRows);
 输出: "LDREOEIIECIHNTSG"
 解释:
 
-L     D     R
-E   O E   I I
-E C   I H   N
-T     S     G
+L0    D6    R
+E1  O E   I I
+E2 C  I H   N
+T3    S9    G
 
 */
-public class Solution {
+class Solution {
+    public String convert(String s, int numRows) {
+        if (s.length() == 1 || numRows == 1) {
+            return s;
+        }
+        ArrayList<StringBuilder> stringBuildersRows = new ArrayList<>();
+        for (int i=0; i<numRows; i++) {
+            stringBuildersRows.add(new StringBuilder());
+        }
+        int currentRow = 0;
+        String redirect = "down";
+        for (int i=0; i<s.length(); i++) {
+            stringBuildersRows.get(currentRow).append(s.charAt(i));
+            int div = currentRow / (numRows - 1);
+            int remain = currentRow % (numRows - 1);
+            if (i != 0 && remain == 0 && div % 2 == 0) {  // 转为向下
+                redirect = "down";
+            }
+            if (i != 0 && remain == 0 && div % 2 == 1) {
+                redirect = "up";
+            }
+            if (redirect.equals("up")) {  // 向上
+                currentRow --;
+            }else{ // 向下
+                currentRow ++;
+            }
+        }
+        StringBuilder result = new StringBuilder();
+        for (StringBuilder row: stringBuildersRows) {
+            result.append(row);
+        }
+        return result.toString();
+    }
+    public static void main(String[] args) {
+        String s = "LEETCODEISHIRING";
+        int n = 4;
+        Solution solution = new Solution();
+        System.out.print(solution.convert(s, n));
+
+    }
 }
