@@ -26,7 +26,6 @@ class ListNode {
 
 class Solution {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        boolean l1End = l1 == null;
         ListNode a = l1;
         ListNode b = l2;
         ListNode res = new ListNode(0);
