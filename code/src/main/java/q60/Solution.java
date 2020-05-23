@@ -49,7 +49,7 @@ public class Solution {
             factorial *= i;
         }
         StringBuilder result = new StringBuilder();
-        k --;
+        k --;  // 语义上的第k个数, 也就是程序中的 k-1个数
         while (n != 0) {
 //            int remainSize = numbers.size();
             //            if (remainSize == 0) {
