@@ -2,9 +2,6 @@ package q25;
 
 import utils.ListNode;
 
-import java.util.Stack;
-import java.util.function.Predicate;
-
 /*
 给你一个链表，每 k 个节点一组进行翻转，请你返回翻转后的链表。
 k 是一个正整数，它的值小于或等于链表的长度。
@@ -65,7 +62,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        ListNode head = ListNode.fromListArray(new int[]{1, 2, 3, 4, 5});
+        ListNode head = ListNode.fromArray(new int[]{1, 2, 3, 4, 5});
         Solution solution = new Solution();
         ListNode res = solution.reverseKGroup(head, 2);
         res.printNode();

@@ -10,10 +10,10 @@ public class ListNode {
         val = x;
     }
 
-    public static ListNode fromListArray(int[] arrayList) {
+    public static ListNode fromArray(int[] nodeArray) {
         ListNode preNode = null;
-        for (int i = arrayList.length - 1; i >= 0; i--) {
-            ListNode node = new ListNode(arrayList[i]);
+        for (int i = nodeArray.length - 1; i >= 0; i--) {
+            ListNode node = new ListNode(nodeArray[i]);
             node.next = preNode;
             preNode = node;
         }

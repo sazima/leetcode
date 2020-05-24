@@ -67,9 +67,9 @@ public class Solution {
 
     public static void main(String[] args) {
         Solution s = new Solution();
-        ListNode node1 = ListNode.fromListArray(new int[]{1, 4, 5});
-        ListNode node2 = ListNode.fromListArray(new int[]{1, 3, 4});
-        ListNode node3 = ListNode.fromListArray(new int[]{2, 6});
+        ListNode node1 = ListNode.fromArray(new int[]{1, 4, 5});
+        ListNode node2 = ListNode.fromArray(new int[]{1, 3, 4});
+        ListNode node3 = ListNode.fromArray(new int[]{2, 6});
         ListNode[] a = {node1, node2, node3};
         ListNode listNode = s.mergeKLists(a);
         listNode.printNode();

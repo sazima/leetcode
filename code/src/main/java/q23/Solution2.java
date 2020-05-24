@@ -49,9 +49,9 @@ public class Solution2 {
 
     public static void main(String[] args) {
         Solution2 solution = new Solution2();
-        ListNode node1 = ListNode.fromListArray(new int[]{1, 4, 5});
-        ListNode node2 = ListNode.fromListArray(new int[]{1, 3, 4});
-        ListNode node3 = ListNode.fromListArray(new int[]{2, 6});
+        ListNode node1 = ListNode.fromArray(new int[]{1, 4, 5});
+        ListNode node2 = ListNode.fromArray(new int[]{1, 3, 4});
+        ListNode node3 = ListNode.fromArray(new int[]{2, 6});
         ListNode[] a = {node1, node2, node3};
         solution.mergeKLists(a);
 

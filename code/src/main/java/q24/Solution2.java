@@ -16,7 +16,7 @@ public class Solution2 {
 
     public static void main(String[] args) {
         Solution2 s = new Solution2();
-        ListNode a = ListNode.fromListArray(new int[]{1, 2, 3, 4, 5});
+        ListNode a = ListNode.fromArray(new int[]{1, 2, 3, 4, 5});
         ListNode res = s.swapPairs(a);
         System.out.println("done");
         res.printNode();

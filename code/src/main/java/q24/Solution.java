@@ -1,6 +1,5 @@
 package q24;
 
-import com.sun.corba.se.spi.activation.ServerHeldDown;
 import utils.ListNode;
 
 /*
@@ -63,7 +62,7 @@ class Solution {
 
     public static void main(String[] args) {
         Solution s = new Solution();
-        ListNode a = ListNode.fromListArray(new int[]{1, 2, 3, 4, 5});
+        ListNode a = ListNode.fromArray(new int[]{1, 2, 3, 4, 5});
         ListNode res = s.swapPairs(a);
         System.out.println("done");
         res.printNode();
