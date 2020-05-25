@@ -1,7 +1,5 @@
 package q7;
 
-import com.sun.java.swing.action.NextAction;
-
 import java.util.ArrayList;
 
 /*
