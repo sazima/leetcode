@@ -30,7 +30,7 @@ public class Solution {
         int left = 0;
         int right = x;
         int middle = 1;
-        while (true) {
+        while (left <= right) {
             middle = (right + left) / 2;
             if (x / middle == middle) {
                 return middle;
@@ -40,17 +40,38 @@ public class Solution {
                 }
                 left = middle + 1;
             } else if (x / middle < middle) {  // middle * middle > x
-                if (x / (middle - 1) > (middle - 1)) {
+                if (x / (middle - 1) >= (middle - 1)) {
                     return middle - 1;
                 }
                 right = middle - 1;
             }
         }
+        return middle;
+    }
+
+    public int mySqrt2(int x) {
+        if (x == 0 || x == 1) {
+            return x;
+        }
+        int left = 0;
+        int right = x;
+        int middle = 1;
+        int result = 0;
+        while (left <= right) {
+            middle = (right + left) / 2;
+            if (x / middle >= middle) {   // <=
+                result = middle;
+                left = middle + 1;
+            } else {
+                right = middle - 1;
+            }
+        }
+        return result;
     }
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        int i = solution.mySqrt(2);
+        int i = solution.mySqrt2(8);
         System.out.println(i);
     }
 
