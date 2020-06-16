@@ -1,12 +1,7 @@
 package q82;
 
-import com.sun.corba.se.spi.transport.ReadTimeouts;
-import com.sun.xml.internal.xsom.impl.RestrictionSimpleTypeImpl;
-import sun.plugin2.main.server.ResultID;
 import utils.ListNode;
 
-import javax.swing.tree.VariableHeightLayoutCache;
-import java.util.zip.CRC32;
 
 /*
 删除排序链表中的重复元素 II
