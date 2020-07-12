@@ -1,9 +1,5 @@
 package q79;
 
-import java.nio.file.attribute.UserDefinedFileAttributeView;
-import java.util.ArrayList;
-import java.util.List;
-
 /*
 给定一个二维网格和一个单词，找出该单词是否存在于网格中。
 
