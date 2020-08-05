@@ -1,10 +1,5 @@
 package q127;
 
-import com.sun.imageio.plugins.common.BogusColorSpace;
-import javafx.util.Pair;
-
-import javax.activation.MailcapCommandMap;
-import java.lang.reflect.Parameter;
 import java.util.*;
 
 /*
@@ -42,6 +37,23 @@ wordList = ["hot","dot","dog","lot","log"]
 
 解释: endWord "cog" 不在字典中，所以无法进行转换。
  */
+class Pair<T,U> {
+    private final T key;
+    private final U value;
+
+    public Pair(T key, U value) {
+        this.key = key;
+        this.value = value;
+    }
+
+    public T getKey() {
+        return this.key;
+    }
+
+    public U getValue() {
+        return this.value;
+    }
+}
 
 public class Solution {
     public int ladderLength(String beginWord, String endWord, List<String> wordList) {
