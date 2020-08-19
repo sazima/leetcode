@@ -1,11 +1,5 @@
 package q165;
 
-import java.security.cert.TrustAnchor;
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
-
 /*
 165. 比较版本号
 比较两个版本号 version1 和 version2。
