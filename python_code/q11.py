@@ -35,9 +35,13 @@ class Solution:
             if height[right] > height[left]:
                 result = max([result, (right - left) * height[left]])
                 left += 1
+            elif height[right] < height[left]:
+                result = max([result, (right - left) * height[right]])
+                right -= 1
             else:
                 result = max([result, (right - left) * height[right]])
                 right -= 1
+                left += 1
         return result
 
 
