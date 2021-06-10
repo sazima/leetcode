@@ -27,8 +27,12 @@ class Solution:
         len_numbers = len(nums)
         nums.sort()
         result = None
+        previous = None
         for index in range(0, len_numbers - 1):
             n = nums[index]
+            if n == previous:
+                continue
+            previous = n
             left = index + 1
             right = len_numbers - 1
             while left < right:
