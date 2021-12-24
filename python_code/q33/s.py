@@ -49,17 +49,16 @@ class Solution:
                 return m
             if nums[r] > nums[m]:   # 右边增序
                 if nums[m + 1] <= target <= nums[r]:  # 右边
-                    l += 1
+                    l = m + 1
                 else:
-                    r -= 1
+                    r = m - 1
             # if nums[r] < nums[m]:  # 右侧不是增序, 说明左侧一定增需
             else:
                 if nums[m - 1] >= target >= nums[l]:  # 在左侧
-                    r -= 1
+                    r = m - 1
                 else:
-                    l += 1
+                    l =m + 1
         return -1
-
 if __name__ == '__main__':
     nums = [4, 1]
     target = 4
