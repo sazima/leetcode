@@ -24,19 +24,18 @@
 
 
 """
-from typing import List
-
+from typing import List, Set
 
 
 class Solution:
     def permuteUnique(self, nums: List[int]) -> List[List[int]]:
         result = []
-        already_index = set()
+        already_index = set()  # type: Set[int]
         nums.sort()
         self._back_track([], nums, result, already_index)
         return result
 
-    def _back_track(self, current_result: List[int], nums: List[int], result: List[List[int]], already_index):
+    def _back_track(self, current_result: List[int], nums: List[int], result: List[List[int]], already_index: Set[int]):
         if len(current_result) == len(nums):
             result.append(list(current_result))
             return
@@ -50,7 +49,7 @@ class Solution:
             previous = i
             already_index.add(index)
             current_result.append(i)
-            self._back_track(current_result, nums, result)
+            self._back_track(current_result, nums, result, already_index)
             current_result.pop()
             already_index.remove(index)
 
