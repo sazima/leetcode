@@ -26,7 +26,7 @@ from typing import List
 
 class Solution:
     def jump(self, nums: List[int]) -> int:
-        end =0  #  // 上次跳跃可达范围右边界（下次的最右起跳点）
+        end = 0  #  // 上次跳跃可达范围右边界（下次的最右起跳点）
         max_far = 0  #  目前能跳到的最远位置
         step = 0
 
